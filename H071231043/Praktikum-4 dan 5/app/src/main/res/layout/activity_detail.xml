@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Book Cover Image -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_book_cover"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#E6E6E6">
+
+            <ImageView
+                android:id="@+id/image_detail_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/default_book_cover" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Book Title -->
+        <TextView
+            android:id="@+id/text_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="The Great Gatsby"
+            android:textColor="#4A2800"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Author Name -->
+        <TextView
+            android:id="@+id/text_detail_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="F. Scott Fitzgerald"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+        <!-- Rating Bar -->
+        <RatingBar
+            android:id="@+id/rating_bar_detail"
+            style="?android:attr/ratingBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="#FFEB3B"
+            android:secondaryProgressTint="#FFEB3B"
+            android:progressBackgroundTint="#E0E0E0"
+            android:stepSize="0.5"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:layout_gravity="start"
+            android:translationX="-30dp" />
+
+        <!-- Year and Genre Tags -->
+        <LinearLayout
+            android:id="@+id/layout_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_detail_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#EEEEEE"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:text="1925"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text_detail_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="#EEEEEE"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:text="Fiction"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Book Description Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_book_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="#EAE8FD"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/text_blurb_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Description"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_detail_blurb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Set in the Jazz Age on Long Island, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Review Section -->
+        <TextView
+            android:id="@+id/text_review_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Review"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_detail_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            android:text="A classic American novel depicting the roaring twenties and the American Dream."
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <!-- Add to Favorite Button -->
+        <Button
+            android:id="@+id/button_like"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#6750A4"
+            android:padding="12dp"
+            android:text="add To Favorite"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="24dp" />
+
+    </LinearLayout>
+</ScrollView>
