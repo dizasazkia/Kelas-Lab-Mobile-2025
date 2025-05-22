@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FFF1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Ilustrasi utama -->
+        <ImageView
+            android:id="@+id/iv_illustration"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/img"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Icon Refresh -->
+        <ImageView
+            android:id="@+id/iv_retry"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_refresh"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Judul "Oh no!" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oh no!"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Deskripsi error -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Something went wrong.\nPlease try again"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

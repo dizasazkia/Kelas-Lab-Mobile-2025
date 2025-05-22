@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8FFF1"
+    tools:context=".DetailActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#A7D7A0"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progress_bar_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <!-- Konten Detail -->
+        <ScrollView
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center_horizontal">
+
+                    <!-- Avatar -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_detail_avatar"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:contentDescription="Character Image"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/CircleImageStyle" />
+
+                    <!-- Nama -->
+                    <TextView
+                        android:id="@+id/tv_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Character Name"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#2F4F2F"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Garis pemisah -->
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="2dp"
+                        android:background="#B0C4B1"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Info Karakter -->
+                    <TextView
+                        android:id="@+id/tv_detail_status"
+                        style="@style/DetailTextStyle"
+                        android:text="Status: Alive" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_species"
+                        style="@style/DetailTextStyle"
+                        android:text="Species: Human" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_gender"
+                        style="@style/DetailTextStyle"
+                        android:text="Gender: Male" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_origin"
+                        style="@style/DetailTextStyle"
+                        android:text="Origin: Earth" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_location"
+                        style="@style/DetailTextStyle"
+                        android:text="Location: Galaxy City" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_episode_count"
+                        style="@style/DetailTextStyle"
+                        android:text="Episode Count: 23" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+        <!-- Error State -->
+        <include
+            android:id="@+id/error_view"
+            layout="@layout/error_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>
